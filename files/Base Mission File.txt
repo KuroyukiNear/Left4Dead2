@@ -1,0 +1,63 @@
+ "mission"
+ {
+ 	"Name"		"myCampaign"	//For matchmaking system. Only letters A-Z and Numbers 0-9 allowed.
+  	"Version"	"1"		//For matchmaking system. Only Numbers 0-9 allowed.
+ 
+ 	// Main Menu representation of Campaign.
+ 	"DisplayTitle"	"My Campaign!"
+ 	"Description"	"An epic tale of zombies getting shot in the head."
+ 	"Author"	"Me!"
+ 
+ 	// Where to download the campaign. Seen by people trying to join a server playing this campaign. Not required for workshop submissions.
+ 	"Website"	"http://media.steampowered.com/apps/513/deadline2.html"
+ 
+ 	// VMT shown behind the end credits when your campaign ends. MUST have "vgui/" at the front.
+ 	"OuttroImage"	"vgui/outroTitle_DeadCenter"
+ 
+ 	// A list of melee weapons that are allowed to spawn in the campaign. 
+ 	// Custom melee weapons can be added by using the melee weapon script name in this list, such as "My_custom_melee.txt" at the end of this string.
+ 	"meleeweapons"	"baseball_bat;cricket_bat;crowbar;electric_guitar;fireaxe;frying_pan;golfclub;katana;knife;machete;pitchfork;shovel;tonfa;My_custom_melee" //these are all official melee weapon, plus one extra.
+ 
+ 	// Which set of survivors should be used. 1 for L4D1, 2 for L4D2
+ 	"survivor_set"		"2"	
+ 	
+ 	// Other options. 0 = Off, 1 = on. 
+ 	"allow_cola"		"0"	// Allows the Dead Center cola bottles to spawn.
+ 	"no_wpn_restore"	"0"	// On player wipe, don't keep any weapons.
+ 	"no_female_boomers"	"0"	// Disables spawning of the Boomette.
+ 	"no_cs_weapons"		"0"	// Disables spawning of the German version CS weapons. AS of the "The Last Stand" Css weapons are available for every version of the game. It is unsure if this string is still in use.
+ 	"allow_diesel"		"0"	// Allows the Hard Rain Diesel cans to be used.
+ 
+ 	// Loading screen poster settings.
+ 	"poster"
+ 	{
+ 		// Loadingscreen. VMT must be placed in "materials/vgui/"
+ 		"posterImage"		        "LoadingScreen_MyCampaign" // Square loadingscreen using 1024x1024, 2048x2048, ect ... texture resolution. For below 16:9 Aspect ratio
+ 		"posterImage_widescreen"	"LoadingScreen_MyCampaign_widescreen" // Rectangular loadingscreen using 1024x2048, 4096x2048, ect texture resolution. For above 16:9 Aspect ratio
+ 		// If no dedicated textures were available, a square loadingscreen will be stretched on 16:9, while a rectangular texture will be squeezed on 4:3.
+ 		"fullscreen"			"1" // Fitts loading screen onto entire screen, resizing it if required.  		
+ 		"l4d2_names"			"1" // Use L4D2 survivor names on loadingscreen or not. "survivor_set" already handles this, making this seemingly useless.		
+ 		"character_order"		"coach;mechanic;gambler;producer"  //Order in which survivors appear on the bottom left of the loadingscreen.
+ 		//"character_order"		"biker;manager;teengirl;namvet"  //Ditto, but L4D1 names.		
+ 	}  
+ 	"modes"
+ 	{
+ 		"coop" //Co-Op Game mode. 
+ 		{
+ 			"1"
+ 			{
+ 				"Map"		"my_map1" // BSP file name, without extension
+ 				"DisplayName"	"Map 1!" //Name seen on menu
+ 				"Image"		"maps/my_map1" //Thumbnail VMT file, must be saved in "materials\vgui\maps"
+ 			}
+ 
+ 		//	Additional maps listed here, make sure to number them correctly.
+ 		//	"2"
+ 		//	{
+ 		//		"Map"		 "my_map2"
+ 		//		"DisplayName"	 "Map 2!"
+ 		//		"Image"		 "maps/my_map2"
+ 		//	}			
+ 		}
+ 	}
+ }
